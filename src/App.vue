@@ -3,7 +3,7 @@
     <!-- <side-bar /> -->
     <div  class="main-view">
       <div class="bg-white dark:bg-gray-900 border-b border-white dark:border-gray-500 w-full px-8 py-8">
-        <h3 @click.prevent="darkMode =! darkMode" class="page-title text-gray-800 dark:text-white"> Dashboard </h3>
+        <h3 @click.prevent="darkMode =! darkMode" class="page-title text-gray-800 dark:text-white"> Canary Incident Data </h3>
       </div>
       <div class="route-view bg-gray-100 dark:bg-gray-800">
         <router-view/>

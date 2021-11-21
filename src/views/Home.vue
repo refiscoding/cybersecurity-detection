@@ -29,11 +29,6 @@
         <span class="material-icons">
           sort
         </span>        
-        <!-- <div class="sort-menu absolute top-0 left-0 bg-gray-100 shadow p-3 mt-12 w-40 rounded-lg">
-          <ul>
-            <li v-for="(item, key) in incidentList" :key="key" @click="(filteredByIncident(item), document.getElementByClass('sort-menu')[0].style.display = 'none')" class="my-2 py-2 px-3 hover:bg-gray-200 rounded-lg"> {{ item }} </li>
-          </ul>
-        </div>         -->
       </div>
       <div class="relative cursor-pointer flex justify-between items-center select-none rounded-lg shadow p-3 w-full bg-gray-100 hover:bg-gray-200"> 
         Attackers IP Address
