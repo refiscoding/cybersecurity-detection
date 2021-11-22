@@ -110,11 +110,11 @@
                 }
                 .status--online {
                     @extend .status;
-                    background-color: #46F643;                    
+                    background-color: #05b102;                    
                 }
                 .status--offline {
                     @extend .status;
-                    background-color: #C4C4C4;                    
+                    background-color: #c00707;                    
                 }                
                 .more-icon {
                     cursor: pointer;
@@ -162,7 +162,7 @@
 <script>
 import Modal from '@/components/Modal';
 export default {
-    name: 'DeviceCard',
+    name: 'Device',
     components: {
         Modal,
     },

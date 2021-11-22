@@ -5,7 +5,7 @@
   <div class="overflow-y-scroll py-2">
     <div class="devices-wrapper">
         <div v-for="(item, key) in canary_data.device_list" :key="key">
-            <device-card :data="item" />
+            <!-- <device-card :data="item" /> -->
         </div>
     </div>
   </div>
@@ -37,24 +37,24 @@
         </span>        
       </div>
       <div class="relative cursor-pointer flex justify-between items-center select-none rounded-lg shadow p-3 w-full bg-gray-100 hover:bg-gray-200"> 
-        Created
+        Timestamp
         <span class="material-icons">
           sort
         </span>        
       </div>
       <div class="relative cursor-pointer flex justify-between items-center select-none rounded-lg shadow p-3 w-full bg-gray-100 hover:bg-gray-200"> 
-        Node ID
+        Canary device ID
         <span class="material-icons">
           sort
         </span>        
       </div>
     </div>  
     <div class="px-12 grid items-center grid-cols-6 gap-x-24 font-bold text-sm mb-3 mt-8 text-gray-800 dark:text-gray-200">
-      <h4> Incident type </h4>
-      <h4> Canary IP Address </h4>
+      <h4> Incidents </h4>
+      <h4> Canary device IP Address </h4>
       <h4> Attackers IP Address </h4>
-      <h4> Created </h4>
-      <h4> Node ID </h4>
+      <h4> Timestamp </h4>
+      <h4> Canary device ID </h4>
     </div>
     <div v-for="(item, key) in filtered_data" :key="key" class="grid items-center grid-cols-6 gap-x-24 px-12 py-6 text-gray-600 dark:text-gray-200 bg-white dark:bg-gray-700 rounded-lg my-4">
         <div class="font-bold text-sm"> {{ item.description }} </div>
@@ -72,11 +72,12 @@
   }
 </style>
 <script>
-import DeviceCard from '@/components/DeviceCard';
+import Device from '@/components/Device';
 export default {
-  name: 'Home',
+  name: 'Homepage',
   components: {
-    DeviceCard,
+    // eslint-disable-next-line vue/no-unused-components
+    Device,
   },
   data() {
     return {
@@ -101,17 +102,6 @@ export default {
     this.filtered_data = this.$store.state.canary_data.alerts;
   },
   methods: {
-    // filteredCanaries(nodeID) {
-    //   let filtered = this.canary_data.alerts.filter(function(alert) {
-    //     if (nodeID === undefined) {
-    //       return true
-    //     }else {
-    //       return alert.node_id === nodeID
-    //     }
-        
-    //   } )
-    //   return filtered
-    // },
     filteredByIncident(incident) {
       let filtered = this.canary_data.alerts.filter(function(alert) {
         if (incident === undefined) {
