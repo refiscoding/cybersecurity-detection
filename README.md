@@ -1,4 +1,4 @@
-# Thinkst Canary
+
 
 ## How To Setup The Project
 ``
